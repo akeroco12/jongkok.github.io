@@ -1,2 +1,311 @@
-<h1>halo semuanya</h1>
-<b1>selamat datang didalam website ini</b1>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Saya</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #025723 0%, #04a83e 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      /* Welcome Page Styles */
+      .welcome-container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        padding: 60px 80px;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+        margin: 50px auto;
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #025723 0%, #04a83e 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+      }
+
+      .icon::before {
+        content: "✓";
+        font-size: 40px;
+        color: white;
+      }
+
+      h1 {
+        color: #025723;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      p {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .decoration-line {
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #025723, #04a83e);
+        border-radius: 2px;
+        margin: 25px auto;
+      }
+
+      .btn-masuk {
+        display: inline-block;
+        background: linear-gradient(135deg, #025723 0%, #04a83e 100%);
+        color: white;
+        padding: 15px 40px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 30px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 5px 15px rgba(2, 87, 35, 0.4);
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-masuk:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(2, 87, 35, 0.6);
+      }
+
+      /* Portfolio Page Styles */
+      .portfolio-container {
+        display: none;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .portfolio-header {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .portfolio-header h1 {
+        color: #025723;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-header p {
+        color: #666;
+        font-size: 1.1rem;
+      }
+
+      .section {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+        margin-bottom: 30px;
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .section-title {
+        color: #025723;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #04a83e;
+        display: inline-block;
+      }
+
+      .section-content {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .btn-kembali {
+        display: inline-block;
+        background: linear-gradient(135deg, #666 0%, #888 100%);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 20px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-kembali:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .welcome-container {
+          padding: 40px 30px;
+        }
+        .welcome-container h1 {
+          font-size: 1.8rem;
+        }
+        .portfolio-header h1 {
+          font-size: 1.8rem;
+        }
+        .section {
+          padding: 25px;
+        }
+        .section-title {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23025723'>P</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- Welcome Page -->
+    <div class="welcome-container" id="welcomePage">
+      <div class="icon"></div>
+      <h1>Selamat Datang</h1>
+      <div class="decoration-line"></div>
+      <p>di Website Portofolio Saya</p>
+      <button class="btn-masuk" onclick="showPortfolio()">Masuk</button>
+    </div>
+
+    <!-- Portfolio Page -->
+    <div class="portfolio-container" id="portfolioPage">
+      <!-- Header -->
+      <div class="portfolio-header">
+        <h1>Portofolio Saya</h1>
+        <p>Selamat datang di website portofolio saya</p>
+        <button class="btn-kembali" onclick="showWelcome()">Kembali</button>
+      </div>
+
+      <!-- Tentang Saya -->
+      <div class="section">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="section-content">
+          Saya adalah seorang pelajar yang sedang belajar untuk mengembangkan
+          diri di bidang teknologi informasi khususnya di bidang game developer.
+          Saya memiliki minat besar dalam dunia game dan ingin menjadi seorang
+          game developer profesional
+        </div>
+      </div>
+
+      <!-- Riwayat Pendidikan -->
+      <div class="section">
+        <h2 class="section-title">Riwayat Pendidikan</h2>
+        <div class="section-content">
+          -Paud Mitra ilmu -TK wahidin -Sdn 004 Bangko -Smps wahidin Bangko
+          -Smas wahidin Bangko
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-content">
+          -bermain futsal -bermain basket -bermain voli -bermain game -masang
+          mod di gta san andreas -bermain game online seperti mobile
+          legends,free fire,call of duty mobile,dan lain sebagainya -bermain
+          game offline seperti gta san andreas,need for speed,dan lain
+          sebagainya -bermain game playstation -bermain game pc -bermain game
+          ps2 -bermain game ps3 -masang mod untuk game ps3
+        </div>
+      </div>
+
+      <!-- Status Sekarang -->
+      <div class="section">
+        <h2 class="section-title">Status Sekarang</h2>
+        <div class="section-content">
+          saya belum pernah bekerja di perusahaan manapun, saya masih berstatus
+          sebagai pelajar di sekolah menengah atas dan saya juga sedang belajar
+          untuk mengembangkan diri saya di bidang teknologi informasi khususnya
+          di bidang game developer.
+        </div>
+      </div>
+
+      <!-- Bakat -->
+      <div class="section">
+        <h2 class="section-title">Bakat</h2>
+        <div class="section-content">
+          Saya memiliki bakat di bidang game dan saya masih sedang belajar untuk
+          mengembangkan bakat saya di bidang game developer,saya juga bisa
+          berolahraga seperti bermain sepak bola,basket,dan voli,saya juga
+          pernah mengikuti ekstrakulikuler marching band selama 6 tahun dimana
+          saya bermain sebagai peniup trumpet.
+        </div>
+      </div>
+
+      <!-- Kontak -->
+      <div class="section">
+        <h2 class="section-title">Kontak</h2>
+        <div class="section-content">
+          Email:raifriziqdarmaeza27@gmail.com Instagram:@rrzix.q Whatsapp:+62
+          813 6333 7237 Facebook:Raif Riziq Darmaeza Tiktok:@Cartenk
+        </div>
+      </div>
+
+      <!-- Kembali Button -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <button class="btn-kembali" onclick="showWelcome()">
+          Kembali ke Halaman Utama
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function showPortfolio() {
+        document.getElementById("welcomePage").style.display = "none";
+        document.getElementById("portfolioPage").style.display = "block";
+        window.scrollTo(0, 0);
+      }
+
+      function showWelcome() {
+        document.getElementById("portfolioPage").style.display = "none";
+        document.getElementById("welcomePage").style.display = "block";
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </body>
+</html>
+
